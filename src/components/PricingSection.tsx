@@ -27,7 +27,7 @@ const plans = [
     features: [
       "48 Orações para Crianças",
       "10 Mapas Mentais de Personagens Bíblicos",
-      "Coletânea de Histórias Bíblicas para Dormir",
+      "Coletânea de Histórias Bíblicas em Vídeo para Dormir",
       "Acesso vitalício",
       "Formato PDF digital",
       "Entrega imediata por e-mail",
