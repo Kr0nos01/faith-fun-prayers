@@ -8,6 +8,7 @@ const plans = [
     originalPrice: "19,90",
     description: "Comece sua jornada de fé",
     featured: false,
+    checkoutUrl: "https://checkout.sbpacademy.site/VCCL1O8SCNTX",
     features: [
       "48 Orações para Crianças",
       "Acesso por 5 meses",
@@ -17,8 +18,9 @@ const plans = [
   },
   {
     name: "Premium",
-    price: "22,00",
+    price: "23,00",
     originalPrice: "47,00",
+    checkoutUrl: "https://checkout.sbpacademy.site/VCCL1O8SCNU2",
     description: "Experiência completa de fé",
     featured: true,
     badge: "Mais Popular",
@@ -126,9 +128,12 @@ export const PricingSection = () => {
                   variant={plan.featured ? "cta" : "outline"}
                   size="lg"
                   className="w-full"
+                  asChild
                 >
-                  <Heart className="w-5 h-5" />
-                  {plan.featured ? "Quero o Premium!" : "Quero o Básico!"}
+                  <a href={plan.checkoutUrl} target="_blank" rel="noopener noreferrer">
+                    <Heart className="w-5 h-5" />
+                    {plan.featured ? "Quero o Premium!" : "Quero o Básico!"}
+                  </a>
                 </Button>
               </div>
             </div>
