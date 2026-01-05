@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Heart, ShieldCheck, Mail, Sparkles, Check, Star } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
+import { Heart, ShieldCheck, Mail, Check, Star } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const plans = [
   {
@@ -124,30 +125,27 @@ export const PricingSection = () => {
                 </div>
 
                 {/* CTA Button */}
-                <Button
-                  variant={plan.featured ? "cta" : "outline"}
-                  size="lg"
-                  className="w-full"
-                  asChild
+                <a 
+                  href={plan.checkoutUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && (window as any).fbq) {
+                      (window as any).fbq('track', 'InitiateCheckout', {
+                        content_name: plan.name,
+                        value: parseFloat(plan.price.replace(',', '.')),
+                        currency: 'BRL'
+                      });
+                    }
+                  }}
+                  className={cn(
+                    buttonVariants({ variant: plan.featured ? "cta" : "outline", size: "lg" }),
+                    "w-full"
+                  )}
                 >
-                  <a 
-                    href={plan.checkoutUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    onClick={() => {
-                      if (typeof window !== 'undefined' && (window as any).fbq) {
-                        (window as any).fbq('track', 'InitiateCheckout', {
-                          content_name: plan.name,
-                          value: parseFloat(plan.price.replace(',', '.')),
-                          currency: 'BRL'
-                        });
-                      }
-                    }}
-                  >
-                    <Heart className="w-5 h-5" />
-                    {plan.featured ? "Quero o Premium!" : "Quero o Básico!"}
-                  </a>
-                </Button>
+                  <Heart className="w-5 h-5" />
+                  {plan.featured ? "Quero o Premium!" : "Quero o Básico!"}
+                </a>
               </div>
             </div>
           ))}
