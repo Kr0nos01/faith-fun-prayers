@@ -130,7 +130,20 @@ export const PricingSection = () => {
                   className="w-full"
                   asChild
                 >
-                  <a href={plan.checkoutUrl} target="_blank" rel="noopener noreferrer">
+                  <a 
+                    href={plan.checkoutUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={() => {
+                      if (typeof window !== 'undefined' && (window as any).fbq) {
+                        (window as any).fbq('track', 'InitiateCheckout', {
+                          content_name: plan.name,
+                          value: parseFloat(plan.price.replace(',', '.')),
+                          currency: 'BRL'
+                        });
+                      }
+                    }}
+                  >
                     <Heart className="w-5 h-5" />
                     {plan.featured ? "Quero o Premium!" : "Quero o Básico!"}
                   </a>
