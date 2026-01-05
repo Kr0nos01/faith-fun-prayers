@@ -129,7 +129,10 @@ export const PricingSection = () => {
                   href={plan.checkoutUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
+                    
+                    // Dispara o evento do Facebook Pixel
                     if (typeof window !== 'undefined' && (window as any).fbq) {
                       (window as any).fbq('track', 'InitiateCheckout', {
                         content_name: plan.name,
@@ -137,6 +140,11 @@ export const PricingSection = () => {
                         currency: 'BRL'
                       });
                     }
+                    
+                    // Abre o checkout após um pequeno delay para garantir que o pixel seja disparado
+                    setTimeout(() => {
+                      window.open(plan.checkoutUrl, '_blank');
+                    }, 100);
                   }}
                   className={cn(
                     buttonVariants({ variant: plan.featured ? "cta" : "outline", size: "lg" }),
