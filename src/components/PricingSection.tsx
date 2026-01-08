@@ -19,7 +19,7 @@ const plans = [
   },
   {
     name: "Premium",
-    price: "23,00",
+    price: "17,00",
     originalPrice: "47,00",
     checkoutUrl: "https://checkout.sbpacademy.site/VCCL1O8SCNU2",
     description: "Experiência completa de fé",
