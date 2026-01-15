@@ -26,9 +26,7 @@ export const HeroSection = () => {
               <br />
               <span className="text-foreground">em um momento de fé e conexão</span>
               <br />
-              <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-muted-foreground">
-                com seu filho
-              </span>
+              <span className="text-foreground">com seu filho</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
