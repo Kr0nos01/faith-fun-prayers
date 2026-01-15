@@ -29,7 +29,7 @@ export const HeroSection = () => {
               <span className="text-foreground">com seu filho</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-full lg:max-w-xl mx-auto lg:mx-0 px-2 lg:px-0">
               48 orações infantis prontas para imprimir e ler todas as noites – 
               <span className="font-semibold text-foreground"> simples, leves e cheias de significado.</span>
             </p>
