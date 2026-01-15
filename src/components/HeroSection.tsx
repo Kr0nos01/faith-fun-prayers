@@ -22,12 +22,12 @@ export const HeroSection = () => {
             </div>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight">
-              <span className="text-gradient">48 Orações</span>
+              <span className="text-gradient">Transforme a hora de dormir</span>
               <br />
-              <span className="text-foreground">prontas para imprimir</span>
+              <span className="text-foreground">em um momento de fé e conexão</span>
               <br />
               <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-muted-foreground">
-                e colocar num potinho para ler todas as noites
+                com seu filho
               </span>
             </h1>
             
