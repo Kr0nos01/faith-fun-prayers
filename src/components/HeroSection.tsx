@@ -32,8 +32,8 @@ export const HeroSection = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0">
-              Transforme a hora da oração em um momento especial para seu filho – 
-              <span className="font-semibold text-foreground"> simples, divertido e cheio de fé!</span>
+              48 orações infantis prontas para imprimir e ler todas as noites – 
+              <span className="font-semibold text-foreground"> simples, leves e cheias de significado.</span>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
