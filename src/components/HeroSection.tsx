@@ -37,10 +37,7 @@ export const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <Button variant="cta" size="xl" onClick={scrollToPricing}>
                 <Heart className="w-5 h-5" />
-                Quero criar esse momento
-              </Button>
-              <Button variant="outline" size="lg" onClick={scrollToPricing}>
-                Saiba mais
+                Quero Acessar Agora
               </Button>
             </div>
             
