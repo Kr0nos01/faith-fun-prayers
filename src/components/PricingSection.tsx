@@ -12,7 +12,6 @@ const plans = [
     checkoutUrl: "https://checkout.sbpacademy.site/VCCL1O8SCNTX",
     features: [
       "48 Orações para Crianças",
-      "Acesso por 5 meses",
       "Formato PDF digital",
       "Entrega imediata por e-mail",
     ],
