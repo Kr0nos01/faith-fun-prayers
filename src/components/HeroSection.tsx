@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { DecorativeElements } from "@/components/DecorativeElements";
-import heroImage from "@/assets/hero-children-prayer.jpg";
+import heroImage from "@/assets/potinho-oracoes.png";
 import { Heart, Sparkles } from "lucide-react";
 
 export const HeroSection = () => {
